@@ -30,14 +30,8 @@
               ref: pr-pages
               fetch-depth: 1
         
-        - name: Check  structure
-          run: ls -la
-        
-        - name: Check compiled files
-          run: ls -la ../tmp/trillo/css
-      
-        - name: Check files in target dir
-          run: ls -la css/
+        - name: Create css dir
+          run: mkdir -vp css
           
         - name: Move compiled CSS to path within pr-pages branch
           run: mv ../tmp/trillo/css/* css/
